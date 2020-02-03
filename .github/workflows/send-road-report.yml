@@ -1,0 +1,34 @@
+name: Send a road report by creating an issue on push
+
+on:
+  # Trigger the workflow on push request for the master branch
+  push:
+    branches:
+      - master
+
+  # Schedule a workflow to run at the following UTC time using POSIX
+  # cron syntax
+  schedule:
+    # At 21:30 UTC and 06:30 PST
+    - cron: 30 21 * * *
+    # - cron: '*/5 * * * *' # every 5 mins
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@master
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Clean install dependencies and build
+        run: |
+          npm ci
+          npm run build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

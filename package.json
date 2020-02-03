@@ -1,0 +1,27 @@
+{
+  "name": "sfu-road-conditions",
+  "version": "1.0.0",
+  "description": "Get an email notification about the SFU road conditions",
+  "main": "index.js",
+  "dependencies": {
+    "actions-toolkit": "^2.2.0",
+    "axios": "^0.19.2",
+    "date-fns": "^2.9.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "ts-node src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianikpark/sfu-road-conditions.git"
+  },
+  "author": "ianikpark@gmail.com",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ianikpark/sfu-road-conditions/issues"
+  },
+  "homepage": "https://github.com/ianikpark/sfu-road-conditions#readme"
+}
