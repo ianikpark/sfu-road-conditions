@@ -9,8 +9,8 @@ on:
   # Schedule a workflow to run at the following UTC time using POSIX
   # cron syntax
   schedule:
-    # At 21:30 UTC and 06:30 PST
-    - cron: 30 21 * * *
+    # At 14:30 UTC and 06:30 PST
+    - cron: 30 14 * * *
     # - cron: '*/5 * * * *' # every 5 mins
 
 jobs:
