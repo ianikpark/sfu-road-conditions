@@ -17,7 +17,9 @@ Because the SFU Road Conditions is powered by [GitHub Actions](https://github.co
 1. Inside the [ianikpark/sfu-road-conditions](https://github.com/ianikpark/sfu-road-conditions) repository, locate the Fork button in the top-right corner of the page.
 2. Click **Fork**.
 
-![Image of Fork Button](./img/fork_button.jpg)
+<p align="center">
+    <img alt="Image of Fork button" src="https://user-images.githubusercontent.com/16889308/74393103-f0a93480-4dbd-11ea-892c-da0618ac1c04.png">
+</p>
 
 ### 2. Changing a Scheduled Delivery
 
