@@ -1,8 +1,6 @@
 # SFU Road Conditions
 
-Get email notification about the [Simon Fraser University](https://www.sfu.ca/)'s road conditions and have a safe trip to the [SFU's main Burnaby campus located atop Burnaby Mountain](https://goo.gl/maps/jwt6t7cHvowhUatP8)!
-
-SFU Road Conditions is a [GitHub Actions](https://github.com/features/actions)-powered email delivery service for commuters to the Burnaby campus.
+SFU Road Conditions is a [GitHub Actions](https://github.com/features/actions)-powered email delivery service for commuters to the [Simon Fraser University](https://www.sfu.ca/)'s Burnaby campus. Get email notification about the SFU's road conditions and have a safe trip to the [SFU's main Burnaby campus located atop Burnaby Mountain](https://goo.gl/maps/jwt6t7cHvowhUatP8)!
 
 ## Using the Service
 
@@ -25,7 +23,9 @@ Because the SFU Road Conditions is powered by [GitHub Actions](https://github.co
 
 _**Note 1:** By default, you will get a delivery everyday at 6:30 AM, Pacific Standard Time (PST)._
 
-If you want to choose a different delivery time, you can do so by making a change in the [send-road-report.yml](.github/workflows/send-road-report.yml) file. Change the value of `cron` under `schedule`.
+If you want to choose a different delivery time, you can do so by making a change in the [send-road-report.yml](.github/workflows/send-road-report.yml) file. Change the value of `cron` under `schedule` using [POSIX cron syntax](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/crontab.html#tag_20_25_07).
+
+_**Note 2:** Linux's crontab works at the system time but GitHub Actions' schedule works at [UTC (Coordinated Universal Time)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)._
 
 ```yaml
 ...
@@ -37,8 +37,6 @@ schedule:
 
 ...
 ```
-
-_**Note 2:** Linux's crontab works at the system time but GitHub Actions' schedule works at [UTC (Coordinated Universal Time)](https://en.wikipedia.org/wiki/Coordinated_Universal_Time)._
 
 _**Note 3:** You can use [crontab guru](https://crontab.guru/) to help generate your cron syntax and confirm what time it will run. Do note GitHub Actions does not support the non-standard syntax `@yearly`, `@monthly`, `@weekly`, `@daily`, `@hourly`, and `@reboot`. To help you get started, there is also a list of [crontab guru examples](https://crontab.guru/examples.html)_.
 
