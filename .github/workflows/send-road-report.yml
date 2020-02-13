@@ -1,4 +1,4 @@
-name: Send a road report by creating an issue on push
+name: Send a road report by creating an issue on push & schedule
 
 on:
   # Trigger the workflow on push request for the master branch
@@ -9,9 +9,7 @@ on:
   # Schedule a workflow to run at the following UTC time using POSIX
   # cron syntax
   schedule:
-    # At 14:30 UTC and 06:30 PST
-    - cron: 30 14 * * *
-    # - cron: '*/5 * * * *' # every 5 mins
+    - cron: 30 14 * * *     # 14:30 UTC <=> 06:30 PST
 
 jobs:
   build:
