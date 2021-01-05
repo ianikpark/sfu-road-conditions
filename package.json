@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "actions-toolkit": "^2.2.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "date-fns": "^2.9.0",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
